@@ -1,8 +1,32 @@
 {
   "$schema": "https://json.schemastore.org/nest-cli",
   "collection": "@nestjs/schematics",
-  "sourceRoot": "src",
+  "sourceRoot": "apps/modular-monolith-nest/src",
   "compilerOptions": {
-    "deleteOutDir": true
+    "deleteOutDir": true,
+    "webpack": true,
+    "tsConfigPath": "apps/modular-monolith-nest/tsconfig.app.json"
+  },
+  "monorepo": true,
+  "root": "apps/modular-monolith-nest",
+  "projects": {
+    "modular-monolith-nest": {
+      "type": "application",
+      "root": "apps/modular-monolith-nest",
+      "entryFile": "main",
+      "sourceRoot": "apps/modular-monolith-nest/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/modular-monolith-nest/tsconfig.app.json"
+      }
+    },
+    "identity": {
+      "type": "application",
+      "root": "apps/identity",
+      "entryFile": "main",
+      "sourceRoot": "apps/identity/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/identity/tsconfig.app.json"
+      }
+    }
   }
 }
