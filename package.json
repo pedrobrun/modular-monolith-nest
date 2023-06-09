@@ -17,7 +17,9 @@
     "test:watch": "jest --watch",
     "test:cov": "jest --coverage",
     "test:debug": "node --inspect-brk -r tsconfig-paths/register -r ts-node/register node_modules/.bin/jest --runInBand",
-    "test:e2e": "jest --config ./apps/modular-monolith-nest/test/jest-e2e.json"
+    "test:e2e": "jest --config ./apps/modular-monolith-nest/test/jest-e2e.json",
+    "start:dev:credit": "npx nodemon --exec 'ts-node src/modules/credit/src/main.ts'",
+    "start:dev:identity": "npx nodemon --exec 'ts-node src/modules/identity/src/main.ts'"
   },
   "dependencies": {
     "@nestjs/common": "^9.0.0",
