@@ -1,4 +1,4 @@
-import { HttpException, Logger, Module } from '@nestjs/common';
+import { HttpException, Module } from '@nestjs/common';
 import { UserService } from './user.service';
 import { UserResolver } from './user.resolver';
 import { GraphQLModule } from '@nestjs/graphql';
