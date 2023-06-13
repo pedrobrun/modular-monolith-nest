@@ -8,5 +8,6 @@ async function bootstrap() {
   const app = await NestFactory.create(AppModule);
   await app.listen(PORT);
   Logger.log(`Running on ${PORT}`);
+  Logger.log(`Apollo's playground: http://localhost:${PORT}/graphql`);
 }
 bootstrap();
